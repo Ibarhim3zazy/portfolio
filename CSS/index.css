@@ -132,7 +132,7 @@ hr{
 }
 .cervices{
   width: 47%;
-  height: 400px;
+  height: auto;
   background-color: #fff3;
   float: left;
   margin: 10px;
@@ -143,20 +143,22 @@ hr{
   text-decoration: none;
   color: inherit;
 }
+.cervices a:hover{
+  color: #000d;            /*  1 try */
+}
 .container h2{
   margin-left: 30px;
 }
 .cervices:hover{
   background-color: #fffd;
-  color: #000d;
+  color: #000d;              /*  1 try */
 }
 .cervices img{
   width: 90%;
-  height: 75%;
-  /* border-style: none;       why...
-  border-width: 0px; */
+  height: 250px;
+  padding: 0px;
   border-radius: 5%;
-  margin-left: 5%;
+  margin: 0px 0px 5% 5%;
   transform: rotateY(90deg) rotateX(90deg);
 }
 .cervices:hover img{
@@ -172,9 +174,19 @@ hr{
   float: left;
   margin-left: 40px;
 }
+.Experience h1{
+  border-style: none;
+  font-size: 28px;
+  padding: 0px 20px 0px 0px;
+  margin: 0px;
+}
+.Experience p{
+  padding: 0px;
+  text-align: left;
+}
 .work-ex-a{
   width: 35%;
-  height: 180px;
+  height: auto;
   padding: 20px;
   background-color: #fff2;
   float: left;
@@ -202,7 +214,7 @@ hr{
 }
 .work-ex-b{
   width: 35%;
-  height: 180px;
+  height: auto;
   padding: 20px;
   background-color: #fff2;
   float: left;
@@ -240,7 +252,7 @@ hr{
 }
 .contact-a[name="email"]{
   float: right;
-  margin-right: -20px;;
+  margin-right: -24px;
 }
 #contact-b{
   width: 100%;
@@ -322,7 +334,42 @@ input[type="text"]:focus,textarea:focus{
     display: none;
   }
 }
+.container a{
+  color: #fffd;
+  font-weight: bolder;
+  transition: .2s;
+}
+.container a:hover{
+  color: #a43f49;
+}
 @media only screen and (max-width: 1150px){
+.links{
+  position: relative;
+}
+.header .links:hover .icon span:nth-child(2){
+  width:100%;
+}
+.links .icon{
+  width:30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.links .icon span{
+  background-color: #fff;
+  margin-bottom: 5px;
+  height: 2px;
+}
+.links .icon span:first-child{
+  width: 100%;
+}
+.links .icon span:nth-child(2){
+  width: 60%;
+  transition: 0.3s;
+}
+.links .icon span:last-child{
+  width: 100%;
+}
  .menu{
    display: none;
  }
@@ -339,6 +386,7 @@ input[type="text"]:focus,textarea:focus{
     width: 60%;
   }
   .contact-a{
+    float: none;
     width: 100%;
     margin-top: 20px;
   }
